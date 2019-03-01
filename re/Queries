@@ -1,0 +1,19 @@
+1.select clgname,progname,AI_cat_openingrank ,AI_cat_closingrank from college join program on college.clgid=program.clgid where clgname='NIT CALICUT'  and AI_cat_name='AI_GEN';
+
+2.select coursename from (college join program on college.clgid=program.clgid) as pc join course on course.progid=pc.progid where clgname='IIIT BANGALORE';
+
+3.select campus_size_inacre,medical,sports_facilities,library from college join campusfacilities on college.clgid = campusfacilities.clgid  where clgname ='IIIT HYDERABAD' ;
+
+4.select percent_of_student_placed from college join program on college.clgid=program.clgid where college.clgname = 'NIT DURGAPUR' and progname='Mechanical Engineering';
+
+5.select clgname,campus_size_inacre from college c join campusfacilities cf on c.clgid=cf.clgid where campus_size_inacre>100;
+
+6.select clgname from college c join campusfacilities cf on c.clgid = cf.clgid where (2018-estb_year) >15 and campus_size_inacre >70 ;
+
+7. select clgname from college join program on college.clgid = program.clgid where AI_cat_openingrank >5000 and AI_cat_closingrank <15000;
+
+8.select  clgname,program.progname from college join program on  college.clgid = program.clgid  where girlstoboys_ratio ='1:3';
+
+9. select  clgname from college join program on college.clgid= program.clgid where progname ='Computer Science' and avg_package_inlpa > 6.00 ;
+
+10. select clgname from college join program on college.clgid = program.clgid where Leading_company ='amazon';
